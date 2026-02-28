@@ -1,0 +1,152 @@
+/* ========================= */
+/* RESET NHẸ TOÀN TRANG */
+/* ========================= */
+* {
+    box-sizing: border-box; /* tính padding + border vào width/height */
+    margin: 0;              /* xoá margin mặc định của trình duyệt */
+    padding: 0;             /* xoá padding mặc định */
+}
+
+/* ========================= */
+/* BODY – CĂN GIỮA FORM */
+/* ========================= */
+body {
+    min-height: 100vh; /* chiều cao tối thiểu = toàn màn hình */
+
+    /* ảnh nền toàn trang */
+    background-image: url("https://res.cloudinary.com/dvhiojpvf/image/upload/v1772250751/final_project/dmeueimwztljiuorekbs.png");
+    background-size: cover;       /* phủ kín màn hình */
+    background-position: center;  /* căn ảnh chính giữa */
+    background-repeat: no-repeat; /* không lặp ảnh */
+
+    /* căn form ra giữa màn hình */
+    display: flex;
+    justify-content: center; /* căn ngang */
+    align-items: center;     /* căn dọc */
+
+    font-family: "Segoe UI", Arial, sans-serif; /* font mặc định */
+}
+
+/* ========================= */
+/* OVERLAY MỜ PHỦ NỀN */
+/* giúp form nổi bật hơn */
+/* ========================= */
+body::before {
+    content: "";          /* bắt buộc để pseudo-element hoạt động */
+    position: absolute;   /* phủ toàn màn hình */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.35); /* lớp phủ tối mờ */
+    z-index: -1;           /* nằm sau nội dung */
+}
+
+/* ========================= */
+/* CONTAINER FORM */
+/* ========================= */
+.formContainer {
+    width: 100%;          /* full chiều ngang trong giới hạn */
+    max-width: 420px;     /* giới hạn chiều rộng form */
+    padding: 28px;        /* khoảng cách bên trong */
+
+    background: rgba(0,0,0,0.7); /* nền form đen mờ */
+    border-radius: 14px;         /* bo góc mềm */
+
+    /* bóng đổ tạo chiều sâu */
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.06);
+
+    /* hiệu ứng xuất hiện nhẹ */
+    animation: fadeIn 0.6s ease;
+}
+
+/* ========================= */
+/* TIÊU ĐỀ FORM */
+/* ========================= */
+.formContainer h2 {
+    font-weight: 700;     /* chữ đậm */
+    color: #fff;          /* chữ trắng */
+    margin-bottom: 22px;  /* cách phần dưới */
+}
+
+/* ========================= */
+/* LABEL INPUT */
+/* ========================= */
+.form-label {
+    font-size: 14px;      /* cỡ chữ nhỏ gọn */
+    font-weight: 600;     /* hơi đậm */
+    color: #fff;          /* chữ trắng */
+}
+
+/* ========================= */
+/* INPUT TEXT */
+/* ========================= */
+.form-control {
+    padding: 11px 12px;   /* khoảng cách trong ô input */
+    border-radius: 8px;   /* bo góc */
+    border: 1px solid #ccc; /* viền xám nhạt */
+    font-size: 14px;
+
+    /* hiệu ứng mượt khi focus */
+    transition: all 0.25s ease;
+}
+
+/* khi focus vào input */
+.form-control:focus {
+    border-color: #0d6efd; /* viền xanh Bootstrap */
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+/* ========================= */
+/* BUTTON CHÍNH */
+/* ========================= */
+.btn-primary {
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+
+    /* hiệu ứng hover mượt */
+    transition: all 0.3s ease;
+}
+
+/* hover nút */
+.btn-primary:hover {
+    transform: translateY(-2px); /* nhấc nút lên nhẹ */
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.35);
+}
+
+/* ========================= */
+/* TEXT & LINK PHỤ */
+/* ========================= */
+.formContainer p {
+    font-size: 14px;
+    color: #666; /* xám nhạt */
+}
+
+.formContainer a {
+    color: #0d6efd;       /* link xanh */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.formContainer a:hover {
+    text-decoration: underline; /* hover gạch chân */
+}
+
+/* ========================= */
+/* ANIMATION FADE IN */
+/* ========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;                  /* mờ */
+        transform: translateY(15px); /* trôi từ dưới lên */
+    }
+    to {
+        opacity: 1;                  /* rõ */
+        transform: translateY(0);
+    }
+}

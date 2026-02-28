@@ -1,0 +1,90 @@
+h2 {
+  font-weight: 700; /* Làm chữ tiêu đề h2 đậm hơn */
+}
+
+.card {
+  border-radius: 12px; /* Bo tròn góc card cho mềm mại */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Đổ bóng nhẹ phía dưới card */
+}
+
+.badge {
+  font-size: 0.85rem; /* Giảm kích thước chữ của badge */
+}
+
+select {
+  max-width: 200px; /* Giới hạn chiều rộng tối đa của dropdown */
+}
+
+#productList img {
+  width: 60px; /* Chiều rộng ảnh sản phẩm */
+  height: 60px; /* Chiều cao ảnh sản phẩm */
+  object-fit: contain; /* Giữ tỉ lệ ảnh, không bị méo */
+}
+
+table td,
+table th {
+  vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
+}
+
+table th {
+  font-weight: 600; /* Làm tiêu đề bảng đậm vừa */
+}
+
+.order-card:hover {
+  border-left: 4px solid #dc3545; /* Hover thì hiện viền đỏ bên trái */
+}
+
+.order-status {
+  cursor: pointer; /* Hiện con trỏ dạng bàn tay khi hover */
+}
+
+.order-status:hover {
+  text-decoration: underline; /* Hover thì gạch chân giống link */
+}
+
+/* =========================
+   PRODUCTS
+   ========================= */
+
+.product-img {
+  width: 60px; /* Kích thước ảnh sản phẩm */
+  height: 60px;
+  object-fit: contain; /* Ảnh vừa khung, không cắt */
+}
+
+.product-info {
+  text-align: center; /* Căn giữa thông tin sản phẩm */
+}
+
+.product-name {
+  display: block; /* Hiển thị như block để xuống dòng */
+  font-size: 1.05rem; /* Tăng nhẹ kích thước tên sản phẩm */
+}
+
+.product-price {
+  font-weight: 600; /* Giá sản phẩm đậm */
+  color: #198754; /* Màu xanh lá (giá tiền) */
+}
+
+.product-stock {
+  color: #6c757d; /* Màu xám cho số lượng tồn */
+}
+
+/* =========================
+   CARD HOVER EFFECT
+   ========================= */
+
+.card {
+  transition: 
+    box-shadow 0.25s ease, /* Hiệu ứng chuyển bóng mượt */
+    transform 0.25s ease;  /* Hiệu ứng di chuyển mượt */
+}
+
+.card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18); /* Hover thì bóng đậm hơn */
+  transform: translateY(-6px); /* Card nhấc lên một chút */
+}
+
+.card {
+  cursor: pointer; /* Card có thể click */
+}

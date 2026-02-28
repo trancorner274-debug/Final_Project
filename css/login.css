@@ -1,0 +1,141 @@
+/* =========================
+   RESET NHẸ
+========================= */
+* {
+    box-sizing: border-box; /* Tính padding + border vào width/height */
+    margin: 0;              /* Xóa margin mặc định */
+    padding: 0;             /* Xóa padding mặc định */
+}
+
+/* =========================
+   BODY – CĂN GIỮA FORM
+========================= */
+body {
+    min-height: 100vh; /* Chiều cao tối thiểu full màn hình */
+    background-image: url("https://res.cloudinary.com/dvhiojpvf/image/upload/v1772250751/final_project/dmeueimwztljiuorekbs.png"); /* Ảnh nền */
+    background-size: cover;        /* Phủ kín toàn màn hình */
+    background-position: center;   /* Căn giữa ảnh */
+    background-repeat: no-repeat;  /* Không lặp ảnh */
+
+    display: flex;                /* Dùng flexbox */
+    justify-content: center;      /* Căn giữa theo chiều ngang */
+    align-items: center;          /* Căn giữa theo chiều dọc */
+
+    font-family: "Segoe UI", Arial, sans-serif; /* Font chữ */
+}
+
+/* LỚP PHỦ TỐI TRÊN ẢNH NỀN */
+body::before {
+    content: "";                  /* Bắt buộc để pseudo-element hiển thị */
+    position: absolute;           /* Phủ toàn màn hình */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.35); /* Lớp phủ tối ảnh nền */
+    z-index: -1;                     /* Đẩy xuống dưới nội dung */
+}
+
+/* =========================
+   CONTAINER FORM
+========================= */
+.formContainer {
+    width: 100%;              /* Full width trên mobile */
+    max-width: 420px;         /* Giới hạn chiều rộng */
+    padding: 28px;            /* Khoảng cách bên trong */
+    background: rgba(0,0,0,0.7); /* Nền đen trong suốt */
+    border-radius: 14px;      /* Bo góc mềm */
+
+    /* BÓNG ĐỔ NỔI FORM */
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12), /* Bóng chính */
+        0 2px 8px rgba(0, 0, 0, 0.06);   /* Bóng phụ */
+
+    /* Animation khi form xuất hiện */
+    animation: fadeIn 0.6s ease;
+}
+
+/* =========================
+   TIÊU ĐỀ FORM
+========================= */
+.formContainer h2 {
+    font-weight: 700; /* Chữ đậm */
+    color: #fff;      /* Màu trắng */
+    margin-bottom: 22px; /* Cách nội dung bên dưới */
+}
+
+/* =========================
+   LABEL
+========================= */
+.form-label {
+    font-size: 14px;   /* Cỡ chữ nhỏ gọn */
+    font-weight: 600;  /* Đậm vừa */
+    color: #fff;       /* Trắng để nổi trên nền tối */
+}
+
+/* =========================
+   INPUT
+========================= */
+.form-control {
+    padding: 11px 12px;      /* Tăng vùng bấm */
+    border-radius: 8px;      /* Bo góc input */
+    border: 1px solid #ccc;  /* Viền mặc định */
+    transition: all 0.25s ease; /* Hiệu ứng mượt */
+    font-size: 14px;         /* Cỡ chữ input */
+}
+
+/* Khi focus vào input */
+.form-control:focus {
+    border-color: #0d6efd; /* Viền xanh Bootstrap */
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25); /* Ánh sáng focus */
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn-primary {
+    padding: 11px;          /* Nút dày, dễ bấm */
+    border-radius: 8px;     /* Bo góc */
+    font-weight: 600;       /* Chữ đậm */
+    font-size: 15px;        /* Cỡ chữ nút */
+    transition: all 0.3s ease; /* Hover mượt */
+}
+
+/* Hover nút */
+.btn-primary:hover {
+    transform: translateY(-2px); /* Nút nhấc lên */
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.35); /* Bóng xanh */
+}
+
+/* =========================
+   LINK ĐĂNG NHẬP / ĐĂNG KÝ
+========================= */
+.formContainer p {
+    font-size: 14px; /* Chữ nhỏ */
+    color: #666;     /* Xám nhạt */
+}
+
+.formContainer a {
+    color: #0d6efd;      /* Màu link xanh */
+    font-weight: 600;    /* Đậm hơn chữ thường */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.formContainer a:hover {
+    text-decoration: underline; /* Hover thì gạch chân */
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;                /* Bắt đầu mờ */
+        transform: translateY(15px); /* Trượt nhẹ từ dưới lên */
+    }
+    to {
+        opacity: 1;                /* Hiện rõ */
+        transform: translateY(0);  /* Về vị trí ban đầu */
+    }
+}

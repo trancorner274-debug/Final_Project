@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chợ Công Nghệ-Trang chủ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/dark_mode.css" />
+    <link rel="website icon" href="https://res.cloudinary.com/dvhiojpvf/image/upload/v1772250749/final_project/o0bkdzclxnq3xszsk6mj.png" type="image/x-icon"/>
+  </head>
+  <body>
+    <!-- 🔥 NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">Chợ Công Nghệ</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- LEFT MENU -->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./product.html">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./carts_and_order_tracking.html">Giỏ Hàng và Theo dõi Đơn Hàng</a>
+            </li>
+          </ul>
+
+          <!-- RIGHT MENU -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <span class="nav-link" id="welcomeText">Xin chào 👋</span>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-light btn-sm ms-2" id="logoutBtn">
+                Đăng xuất
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 🔥 HERO -->
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Chào mừng đến với Chợ Công Nghệ Online 2025 🚀</h1>
+        <p>Nơi mua sắm laptop, điện thoại, phụ kiện công nghệ chính hãng</p>
+      </div>
+    </div>
+
+    <!-- Table sản phẩm nổi bật-->
+    <div class="container my-5">
+      <h2 class="mb-4 text-center">Sản phẩm nổi bật</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center" id="featuredProductsTable">
+          <thead class="table-dark">
+            <tr>
+              <th>Hình ảnh</th>
+              <th>Tên sản phẩm</th>
+              <th>Loại</th>
+              <th>Giá (VND)</th>
+              <th>Đánh giá</th>
+            </tr>
+          </thead>
+          <tbody id="productTableBody">
+            <!-- Dữ liệu sản phẩm sẽ được chèn ở đây bởi JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 🔻 FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <h5>Chợ Công Nghệ Online</h5>
+            <p>
+              Nền tảng mua sắm laptop, điện thoại và phụ kiện công nghệ uy tín.
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Liên kết</h5>
+            <ul class="footer-links">
+              <li><a href="#">Trang chủ</a></li>
+              <li><a href="#">Sản phẩm</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Liên hệ</h5>
+            <p>Email: support@chocongnghe.vn</p>
+            <p>Hotline: 1900 9999</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center copyright">
+          © 2025 Chợ Công Nghệ Online. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.3.0/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.3.0/firebase-auth-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.3.0/firebase-firestore-compat.min.js"></script>
+
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dark_mode.js"></script>
+    <script src="../js/chatbot.js"></script>
+  </body>
+</html>

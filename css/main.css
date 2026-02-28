@@ -1,0 +1,132 @@
+/* =========================
+   BODY
+========================= */
+body {
+    background-color: #f5f6f8; /* Nền xám nhạt cho toàn trang */
+    font-family: "Segoe UI", Arial, sans-serif; /* Font chữ chính */
+    margin: 0; /* Xóa margin mặc định của trình duyệt */
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar-brand {
+    font-weight: 700; /* Làm tên thương hiệu đậm */
+    letter-spacing: 0.5px; /* Giãn nhẹ khoảng cách chữ */
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    position: relative; /* Làm mốc cho overlay */
+    height: 70vh; /* Chiều cao hero = 70% màn hình */
+    background-image: url("https://res.cloudinary.com/dvhiojpvf/image/upload/v1772250751/final_project/dmeueimwztljiuorekbs.png"); /* Ảnh nền hero */
+    background-size: cover; /* Phủ kín khu vực hero */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp ảnh */
+
+    display: flex; /* Dùng flexbox */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    text-align: center; /* Căn giữa chữ */
+}
+
+/* =========================
+   OVERLAY (LỚP PHỦ)
+========================= */
+.hero::before {
+    content: ""; /* Bắt buộc để pseudo-element hiển thị */
+    position: absolute; /* Phủ toàn bộ hero */
+    inset: 0; /* Top, right, bottom, left = 0 */
+    background: rgba(0, 0, 0, 0.45); /* Lớp phủ tối giúp chữ nổi */
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+.hero-content {
+    position: relative; /* Đặt trên overlay */
+    z-index: 1; /* Đảm bảo nằm trên lớp phủ */
+    color: #fff; /* Chữ trắng */
+    max-width: 700px; /* Giới hạn chiều rộng nội dung */
+    padding: 20px; /* Khoảng cách trong */
+}
+
+/* Tiêu đề hero */
+.hero-content h1 {
+    font-size: 2.5rem; /* Chữ lớn */
+    font-weight: 700; /* Đậm */
+    margin-bottom: 15px; /* Cách đoạn văn bên dưới */
+}
+
+/* Mô tả hero */
+.hero-content p {
+    font-size: 1.1rem; /* Chữ vừa */
+    opacity: 0.9; /* Hơi trong để dịu mắt */
+}
+
+/* Nút trong hero */
+.hero-content .btn {
+    margin-top: 20px; /* Cách nội dung phía trên */
+    padding: 10px 25px; /* Nút to, dễ bấm */
+    font-size: 1rem; /* Cỡ chữ nút */
+    font-weight: 600; /* Chữ đậm vừa */
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: #111; /* Nền footer màu đen */
+    color: #ddd; /* Màu chữ xám sáng */
+    padding: 40px 0 20px; /* Trên 40px, dưới 20px */
+    margin-top: 60px; /* Cách nội dung phía trên */
+}
+
+/* Tiêu đề footer */
+.footer h5 {
+    color: #fff; /* Trắng */
+    font-weight: 700; /* Đậm */
+    margin-bottom: 15px; /* Cách nội dung bên dưới */
+}
+
+/* Đoạn văn footer */
+.footer p {
+    font-size: 14px; /* Chữ nhỏ gọn */
+    color: #bbb; /* Xám nhạt */
+}
+
+/* Danh sách link footer */
+.footer-links {
+    list-style: none; /* Bỏ dấu chấm */
+    padding: 0; /* Bỏ padding mặc định */
+}
+
+.footer-links li {
+    margin-bottom: 8px; /* Khoảng cách giữa các link */
+}
+
+/* Link footer */
+.footer-links a {
+    color: #bbb; /* Màu link */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-size: 14px; /* Cỡ chữ */
+}
+
+/* Hover link footer */
+.footer-links a:hover {
+    color: #fff; /* Hover thì sáng lên */
+}
+
+/* Đường kẻ footer */
+.footer hr {
+    border-color: #333; /* Màu đường kẻ */
+    margin: 20px 0; /* Cách trên dưới */
+}
+
+/* Copyright */
+.footer .copyright {
+    font-size: 13px; /* Chữ nhỏ */
+    color: #888; /* Xám mờ */
+}

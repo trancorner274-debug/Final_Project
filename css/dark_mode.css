@@ -1,0 +1,335 @@
+/* ======== DARK MODE STYLES ======== */
+
+/* ===== ROOT ===== */
+body {
+  background-color: #f5f6f8; /* Nền sáng mặc định */
+  transition: background-color 0.35s ease, color 0.35s ease; /* Hiệu ứng chuyển sáng ↔ tối mượt */
+}
+
+body.dark-mode {
+  background-color: #121212 !important; /* Nền tối khi bật dark mode */
+  color: #eaeaea; /* Màu chữ sáng */
+}
+
+/* ===== TEXT GLOBAL ===== */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode span,
+.dark-mode label {
+  color: #eaeaea; /* Đổi toàn bộ chữ sang màu sáng khi dark mode */
+}
+
+/* ===== BOOTSTRAP BACKGROUND FIX ===== */
+body.dark-mode .bg-light {
+  background-color: #121212 !important; /* Override nền sáng của Bootstrap */
+}
+
+body.dark-mode .container,
+body.dark-mode section {
+  background-color: transparent !important; /* Tránh container bị nền trắng */
+}
+
+/* ===== HERO ===== */
+.dark-mode .hero {
+  background-color: transparent; /* Giữ hero hòa vào nền tối */
+}
+
+/* ===== CARD ===== */
+.dark-mode .card {
+  background-color: #1e1e1e; /* Nền card tối */
+  color: #f1f1f1; /* Chữ sáng */
+  border: 1px solid #333; /* Viền card mờ */
+}
+
+/* ===== TABLE ===== */
+.dark-mode table {
+  color: #eaeaea; /* Chữ bảng sáng */
+}
+
+.dark-mode .table-bordered > :not(caption) > * {
+  border-color: #333; /* Đổi màu viền bảng */
+}
+
+.dark-mode .table-dark {
+  background-color: #222; /* Nền bảng tối hơn */
+}
+
+/* ===== FORM / INPUT ===== */
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background-color: #1a1a1a; /* Nền input tối */
+  color: #fff; /* Chữ trắng */
+  border: 1px solid #444; /* Viền input */
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #aaa; /* Màu chữ gợi ý */
+}
+
+.dark-mode input:focus,
+.dark-mode select:focus,
+.dark-mode textarea:focus {
+  background-color: #1a1a1a; /* Giữ nền tối khi focus */
+  color: #fff; /* Giữ chữ sáng */
+  border-color: #4d90fe; /* Viền xanh khi chọn */
+  box-shadow: none; /* Bỏ hiệu ứng shadow mặc định */
+}
+
+/* ===== BUTTON ===== */
+.dark-mode .btn-outline-light {
+  color: #fff; /* Chữ trắng */
+  border-color: #777; /* Viền sáng */
+}
+
+.dark-mode .btn-outline-light:hover {
+  background-color: #444; /* Hover chuyển nền xám */
+}
+
+.dark-mode .btn-primary {
+  background-color: #2563eb; /* Màu xanh chính */
+  border-color: #2563eb;
+}
+
+/* ===== NAVBAR ===== */
+.dark-mode .navbar {
+  background-color: #0f0f0f !important; /* Navbar tối */
+}
+
+/* ===== MODAL ===== */
+.dark-mode .modal-content {
+  background-color: #1e1e1e; /* Nền modal tối */
+  color: #fff; /* Chữ sáng */
+}
+
+.dark-mode .modal-header,
+.dark-mode .modal-footer {
+  border-color: #333; /* Viền modal */
+}
+
+/* ===== FOOTER (KHÔNG PHÁ LAYOUT) ===== */
+.dark-mode .footer {
+  background-color: #0f0f0f; /* Footer tối */
+  color: #ccc; /* Chữ xám sáng */
+}
+
+.dark-mode .footer a {
+  color: #aaa; /* Link footer */
+}
+
+.dark-mode .footer a:hover {
+  color: #fff; /* Hover link sáng lên */
+}
+
+/* ===== CART / ORDER PAGE FIX ===== */
+.dark-mode #cartItems,
+.dark-mode #orderTracking {
+  background-color: transparent !important; /* Tránh nền trắng trong cart/order */
+}
+
+.dark-mode hr {
+  border-color: #333; /* Đổi màu đường kẻ */
+}
+
+.dark-mode .text-muted {
+  color: #aaa !important; /* Đổi màu text-muted */
+}
+
+/* ===== DARK MODE TOGGLE ===== */
+#darkModeToggle {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Chuyển màu nút mượt */
+}
+
+.dark-mode #darkModeToggle {
+  background-color: #444 !important; /* Nền nút khi bật dark */
+  color: #fff; /* Chữ trắng */
+}
+
+.dark-mode #darkModeToggle:hover {
+  background-color: #666 !important; /* Hover sáng hơn */
+}
+
+/* =================================================
+   🌙 DARK MODE – CHATBOT WIDGET
+   ================================================= */
+
+body.dark-mode .chatbot-panel {
+  background: #1e1e1e; /* Nền panel chatbot */
+  color: #eaeaea; /* Chữ chatbot */
+}
+
+body.dark-mode .chatbot-header {
+  background: #181818; /* Header chatbot tối */
+  border-bottom: 1px solid #333; /* Viền dưới */
+  color: #fff;
+}
+
+body.dark-mode .chatbot-model-info {
+  background: #141414; /* Thanh info model */
+  color: #aaa;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .chatbot-body {
+  background: linear-gradient(180deg, #1e1e1e, #161616); /* Gradient nền chat */
+}
+
+body.dark-mode .chatbot-input {
+  background: #181818; /* Nền vùng nhập tin */
+  border-top: 1px solid #333; /* Viền trên */
+}
+
+body.dark-mode .chatbot-input input {
+  background: #121212; /* Nền ô nhập */
+  color: #fff; /* Chữ trắng */
+  border: 1px solid #444; /* Viền input */
+}
+
+body.dark-mode .chatbot-input input::placeholder {
+  color: #888; /* Màu chữ gợi ý */
+}
+
+body.dark-mode .chatbot-input button {
+  background: #2563eb; /* Nút gửi tin nhắn */
+  color: #fff;
+}
+
+body.dark-mode .chatbot-message.bot .bubble {
+  background: #2a2a2a; /* Bong bóng tin nhắn bot */
+  color: #eaeaea;
+}
+
+body.dark-mode .chatbot-message.user .bubble {
+  background: #2563eb; /* Bong bóng tin nhắn user */
+  color: #fff;
+}
+
+/* Floating button */
+body.dark-mode .chatbot-floating-btn {
+  background: #2563eb; /* Nút chatbot nổi */
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45); /* Bóng xanh nổi */
+}
+
+body.dark-mode .chatbot-floating-btn:hover {
+  background: #1e40af; /* Hover thì xanh đậm hơn */
+}
+/* =====================================
+   🌗 AUTO DARK MODE (THEO HỆ ĐIỀU HÀNH)
+   Không cần JavaScript
+===================================== */
+
+/* Khi hệ điều hành đang ở Dark Mode */
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: #121212; /* Nền tối toàn trang */
+    color: #eaeaea; /* Màu chữ sáng */
+  }
+
+  /* ===== TEXT ===== */
+  h1, h2, h3, h4, h5, h6,
+  p, span, label {
+    color: #eaeaea; /* Đảm bảo chữ không bị tối */
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    background-color: #0f0f0f !important; /* Navbar tối */
+  }
+
+  /* ===== CARD ===== */
+  .card {
+    background-color: #1e1e1e; /* Nền card */
+    color: #f1f1f1; /* Chữ trong card */
+    border: 1px solid #333; /* Viền card */
+  }
+
+  /* ===== TABLE ===== */
+  table {
+    color: #eaeaea; /* Chữ bảng */
+  }
+
+  .table-bordered > :not(caption) > * {
+    border-color: #333; /* Viền bảng */
+  }
+
+  /* ===== FORM ===== */
+  input,
+  select,
+  textarea {
+    background-color: #1a1a1a; /* Nền input */
+    color: #fff; /* Chữ input */
+    border: 1px solid #444; /* Viền */
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #aaa; /* Chữ gợi ý */
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #4d90fe; /* Viền xanh khi focus */
+    box-shadow: none;
+  }
+
+  /* ===== BUTTON ===== */
+  .btn-primary {
+    background-color: #2563eb; /* Màu xanh chính */
+    border-color: #2563eb;
+  }
+
+  .btn-outline-light {
+    color: #fff;
+    border-color: #777;
+  }
+
+  .btn-outline-light:hover {
+    background-color: #444;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background-color: #0f0f0f; /* Footer tối */
+    color: #ccc;
+  }
+
+  .footer a {
+    color: #aaa;
+  }
+
+  .footer a:hover {
+    color: #fff;
+  }
+
+  hr {
+    border-color: #333; /* Đường kẻ */
+  }
+
+  .text-muted {
+    color: #aaa !important;
+  }
+
+  /* ===== CHATBOT (NẾU CÓ) ===== */
+  .chatbot-panel {
+    background: #1e1e1e;
+    color: #eaeaea;
+  }
+
+  .chatbot-header {
+    background: #181818;
+    border-bottom: 1px solid #333;
+  }
+
+  .chatbot-input {
+    background: #181818;
+    border-top: 1px solid #333;
+  }
+}

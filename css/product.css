@@ -1,0 +1,143 @@
+/* =========================
+   RESET NHẸ / BODY
+========================= */
+body {
+  background-color: #f4f6f8; /* Nền xám nhạt cho trang */
+  font-family: "Segoe UI", Arial, sans-serif; /* Font chữ chính */
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+.card-product {
+  border: 1px solid #eee; /* Viền card mỏng */
+  border-radius: 12px; /* Bo góc card */
+  overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài */
+  transition: 0.3s; /* Hiệu ứng hover mượt */
+  background: #fff; /* Nền trắng */
+}
+
+/* Hover card */
+.card-product:hover {
+  transform: translateY(-4px); /* Card nhấc lên */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Đổ bóng khi hover */
+}
+
+/* Ảnh sản phẩm */
+.card-product img {
+  width: 100%; /* Ảnh full chiều ngang */
+  height: 220px; /* Chiều cao cố định */
+  object-fit: contain; /* Giữ tỉ lệ ảnh, không cắt */
+  background: #f8f9fa; /* Nền xám nhạt phía sau ảnh */
+  padding: 12px; /* Khoảng cách giữa ảnh và viền */
+}
+
+/* Nội dung card */
+.card-product .card-body {
+  padding: 15px; /* Khoảng cách trong */
+}
+
+/* Tên sản phẩm */
+.card-product h5 {
+  font-size: 16px; /* Cỡ chữ vừa */
+  font-weight: 600; /* Đậm vừa */
+}
+
+/* Giá sản phẩm */
+.card-product .price {
+  margin-top: 8px; /* Cách tên sản phẩm */
+  font-size: 17px; /* Chữ giá to hơn */
+  color: #dc3545; /* Màu đỏ nổi bật */
+}
+
+/* Giá cũ */
+.card-product .old-price {
+  text-decoration: line-through; /* Gạch ngang */
+  color: #888; /* Màu xám */
+  margin-left: 10px; /* Cách giá mới */
+  font-size: 14px; /* Nhỏ hơn giá mới */
+}
+
+/* Hiệu ứng zoom ảnh */
+.card-product img {
+  transition: transform 0.3s; /* Zoom mượt */
+}
+
+/* Hover thì ảnh phóng to nhẹ */
+.card-product:hover img {
+  transform: scale(1.05); /* Phóng to ảnh */
+}
+
+/* Nút mua */
+.card-product .btn-buy {
+  margin-top: 12px; /* Cách nội dung phía trên */
+  background-color: #28a745; /* Màu xanh mua hàng */
+  color: #fff; /* Chữ trắng */
+  border: none; /* Bỏ viền */
+  padding: 10px 15px; /* Nút to dễ bấm */
+  border-radius: 6px; /* Bo góc nút */
+  cursor: pointer; /* Con trỏ bàn tay */
+  transition: background-color 0.3s; /* Hover mượt */
+}
+
+/* Hover nút mua */
+.card-product .btn-buy:hover {
+  background-color: #218838; /* Xanh đậm hơn */
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: #111; /* Nền footer đen */
+    color: #ddd; /* Chữ xám sáng */
+    padding: 40px 0 20px; /* Trên 40px, dưới 20px */
+    margin-top: 60px; /* Cách nội dung phía trên */
+}
+
+/* Tiêu đề footer */
+.footer h5 {
+    color: #fff; /* Trắng */
+    font-weight: 700; /* Đậm */
+    margin-bottom: 15px; /* Cách nội dung dưới */
+}
+
+/* Nội dung footer */
+.footer p {
+    font-size: 14px; /* Chữ nhỏ gọn */
+    color: #bbb; /* Xám nhạt */
+}
+
+/* Danh sách link footer */
+.footer-links {
+    list-style: none; /* Bỏ dấu chấm */
+    padding: 0; /* Bỏ padding */
+}
+
+.footer-links li {
+    margin-bottom: 8px; /* Cách giữa các link */
+}
+
+/* Link footer */
+.footer-links a {
+    color: #bbb; /* Màu link */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-size: 14px; /* Cỡ chữ */
+}
+
+/* Hover link */
+.footer-links a:hover {
+    color: #fff; /* Sáng lên khi hover */
+}
+
+/* Đường kẻ footer */
+.footer hr {
+    border-color: #333; /* Màu đường kẻ */
+    margin: 20px 0; /* Cách trên dưới */
+}
+
+/* Copyright */
+.footer .copyright {
+    font-size: 13px; /* Chữ nhỏ */
+    color: #888; /* Xám mờ */
+}

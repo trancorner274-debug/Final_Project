@@ -1,0 +1,122 @@
+body {
+    background-color: #f5f6f8; /* Màu nền xám nhạt cho toàn trang */
+    font-family: "Segoe UI", Arial, sans-serif; /* Font chữ chính, ưu tiên Segoe UI */
+    margin: 0; /* Xóa khoảng trắng mặc định của trình duyệt */
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar-brand {
+    font-weight: 700; /* Làm tên thương hiệu đậm */
+    letter-spacing: 0.5px; /* Giãn nhẹ khoảng cách chữ cho sang hơn */
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #111; /* Nền footer màu đen đậm */
+    color: #ddd; /* Màu chữ xám nhạt */
+    padding: 40px 0 20px; /* Padding trên 40px, dưới 20px */
+    margin-top: 60px; /* Tạo khoảng cách với nội dung phía trên */
+}
+
+.footer h5 {
+    color: #fff; /* Tiêu đề footer màu trắng */
+    font-weight: 700; /* Chữ đậm */
+    margin-bottom: 15px; /* Cách nội dung bên dưới */
+}
+
+.footer p {
+    font-size: 14px; /* Cỡ chữ nhỏ gọn */
+    color: #bbb; /* Màu xám dịu cho đoạn văn */
+}
+
+.footer-links {
+    list-style: none; /* Bỏ dấu chấm danh sách */
+    padding: 0; /* Bỏ padding mặc định */
+}
+
+.footer-links li {
+    margin-bottom: 8px; /* Khoảng cách giữa các link */
+}
+
+.footer-links a {
+    color: #bbb; /* Màu link mặc định */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-size: 14px; /* Cỡ chữ link */
+}
+
+.footer-links a:hover {
+    color: #fff; /* Hover thì link chuyển sang màu trắng */
+}
+
+.footer hr {
+    border-color: #333; /* Đổi màu đường kẻ ngang */
+    margin: 20px 0; /* Cách trên dưới */
+}
+
+.footer .copyright {
+    font-size: 13px; /* Chữ nhỏ hơn nội dung chính */
+    color: #888; /* Màu xám nhạt */
+}
+
+/* =========================
+   QR PAYMENT STYLE
+========================= */
+
+#qrPayment {
+  padding: 15px; /* Khoảng đệm bên trong khung QR */
+  border-radius: 12px; /* Bo góc khung */
+  background: #f8f9fa; /* Nền xám rất nhạt */
+  animation: fadeInQR 0.3s ease-in-out; /* Hiệu ứng xuất hiện mượt */
+}
+
+#qrPayment img {
+  width: 220px; /* Chiều rộng QR */
+  height: 220px; /* Chiều cao QR */
+  border-radius: 12px; /* Bo góc ảnh QR */
+  border: 4px solid #0d6efd; /* Viền xanh (primary) */
+  background: #fff; /* Nền trắng phía sau QR */
+  padding: 8px; /* Khoảng cách giữa QR và viền */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Đổ bóng nổi QR */
+}
+
+#qrAmount {
+  margin-top: 10px; /* Cách QR một chút */
+  font-size: 1.1rem; /* Chữ to hơn chữ thường */
+}
+
+#qrPayment button {
+  width: 100%; /* Nút chiếm toàn chiều ngang */
+  font-weight: 600; /* Chữ đậm vừa */
+  padding: 10px; /* Nút dày, dễ bấm */
+  border-radius: 10px; /* Bo góc nút */
+}
+
+/* =========================
+   PAYMENT SELECT
+========================= */
+
+#paymentSelect button {
+  font-weight: 600; /* Chữ nút đậm */
+  border-radius: 10px; /* Bo góc nút chọn phương thức */
+}
+
+/* =========================
+   QR ANIMATION
+========================= */
+
+@keyframes fadeInQR {
+  from {
+    opacity: 0; /* Bắt đầu trong suốt */
+    transform: scale(0.95); /* Nhỏ hơn một chút */
+  }
+  to {
+    opacity: 1; /* Hiện rõ */
+    transform: scale(1); /* Trở về kích thước gốc */
+  }
+}
